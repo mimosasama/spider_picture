@@ -1,3 +1,4 @@
+# 格式机器不规范，写的很丑，有大佬看到了可以帮萌新改一下吗
 from selenium import webdriver
 from time import sleep
 from lxml import etree
@@ -42,6 +43,7 @@ def get_img(htmls):
 
 if __name__ == '__main__':
     html = get_url(main_page_url.format('_47'))
+    # 只有写了第一页的爬取，因为爬取太多网站会给验证码，技术不够故只能作罢，要爬取其他页的请输入_+你想爬取的页数
     urls = get_sun_url(html)
     for urls in urls:
         sub_url = main_url + urls
